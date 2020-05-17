@@ -172,11 +172,12 @@ jobs:
           echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
           sudo apt-get update
           sudo apt-get install cf-cli
-      - name: Migate tracker-database
+      - name: Migrate tracker-database
         run: |
           cf api "$CF_API_URL"
           cf auth
           cf target -o "$CF_ORG" -s "$CF_SPACE"
+          chmod=+x ./gradlew
           ./gradlew cfMigrate
         env:
           CF_API_URL: ${{ secrets.CF_API_URL }}
