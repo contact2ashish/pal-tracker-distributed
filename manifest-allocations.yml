@@ -10,3 +10,9 @@ applications:
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-allocations-database
+  - tracker-service-registry
+  #ribbon:
+   # eureka:
+    #  enabled:false
+    #REGISTRATION_SERVER_RIBBON_LISTOFSERVERS: localhost:8090, localhFlowost:9092, localhost:9999
+    #ServerListRefreshInterval: 15000
