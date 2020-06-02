@@ -14,9 +14,13 @@ buildscript {
         junitVersion = "4.12"
         okhttpVersion = "3.12.0"
         jsonPathVersion = "2.4.0"
-        springCloudVersion = "Hoxton.RELEASE"
+        springCloudVersion = "Finchley.SR3"
         springCloudServicesClientLibrariesVersion = "2.2.1.RELEASE"
-        springCloudCommonVersion = "2.2.1.RELEASE"
+        //springCloudServicesClientLibrariesVersion = "2.0.3.RELEASE"
+        //springCloudCommonVersion = "2.2.1.RELEASE"
+	springCloudCommonVersion = "2.0.3.RELEASE"
+        rxJava2Version = '2.2.8'
+        reactorVersion = '3.3.0.RELEASE'
     }
 
     repositories {
